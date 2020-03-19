@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!--aqui pusimos el titulo que se ve en la barra -->
+  <title>Bienvenido a la trivia de Laboratia</title>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="hermoso.css">
+</head>
+
+<body >
+  <section id="inicio" >
+    <!--aqui pusimos el titulo de nuestra trivia, el usurio lo vera -->
+    <h3>¡Bienvenidos a nuestra trivia!</h3><br>
+    <h2>Harry Potter V/S Lord Voldemort</h2>
+    <h1>Ingresa tu nombre</h1>
+    <!--aqui se pone el input y su tipo y que no se repita -->
+    <input id="inputName" type="text" autocomplete="off">
+    <!--aqui se pone el boton y el evento-->
+    <button onclick="userName()">¡A JUGAR!</button>
+  </section>
+
+  <!--segunda pantalla-->
+  <section id="opciones">
+    <h4 id="saludo">Hola</h4>
+    <!--ahi le agregamos un id al hola pa q se quede quieto-->
+    <h5>Elige tu desafio</h5>
+    <button onclick="catHarry()">Harry Potter</button>
+    <button onclick="catVoldemort()">Lord Voldemort</button>
+  </section>
+  <!--tercera pantalla-->
+  
+  <!--Categoría Harry----------------------------------------------------------------------------------------------->
+  <section id="preguntaUno">
+    <h1> ¿Donde esta la cicatriz de Harry Potter? </h1>
+    <!-- hacer la viñeta usamos type radio, para seleccionar la alternativa, se usa label es el texto, etiqueta-->
+    <form name="preguntaUno"><!--esto es un formulario-->
+    <label><input type="radio" name="frente" value="1"> Cara </label><br>
+    <label><input type="radio" name="frente" value="2"> Frente </label><br>
+    <label><input type="radio" name="frente" value="3"> Brazo </label><br><br>
+    </form>
+    <button onclick="nextQuestHp()"> Siguiente </button>
+  </section>
+
+  <section id="preguntaDos">
+    <form name="preguntaDos">
+    <h1> ¿Que deporte realiza Harry Potter? </h1>
+    <label><input type="radio" name="quidditch" value="futbol"> Futbol </label><br>
+    <label><input type="radio" name="quidditch" value="quidditch"> Quidditch </label><br>
+    <label><input type="radio" name="quidditch" value="boxeo"> Boxeo </label><br><br>
+    </form>
+    <button onclick="nextQuestTwoHp()"> Siguiente </button>
+  </section>
+
+  <section id="preguntaTres">
+    <h1> ¿De que material es la varita de Harry Potter? </h1>
+    <form name="preguntaTres">
+    <label><input type="radio" name="sauco" value="futbol"> Pino </label><br>
+    <label><input type="radio" name="sauco" value="quidditch"> Roble </label><br>
+    <label><input type="radio" name="sauco" value="boxeo"> Sauco </label><br><br>
+    </form>
+    <button onclick="nextQuestThreeHp()"> Finalizar </button>
+  </section>
+<!--Fin Categoría Harry----------------------------------------------------------------------------------------------->
+
+<!--Categoría Voldemort----------------------------------------------------------------------------------------------->
+  <section id="preguntaUnoVol">
+    <h1> ¿En que colegio estudió Lord Voldemort? </h1>
+    <form name="preguntaUnoVol">
+    <label><input type="radio" name="hogwarts" value="brujos school"> Brujos School </label><br>
+    <label><input type="radio" name="hogwarts" value="escuela maligna"> Escuela Maligna </label><br>
+    <label><input type="radio" name="hogwarts" value="hogwarts"> Hogwarts </label><br><br>
+  </form>
+    <button onclick="nextQuestFour()"> Siguiente </button>
+  </section>
+
+  <section id="preguntaDosVol">
+    <h1> ¿Cual otro nombre recibe Lord Voldemort? </h1>
+    <form name="preguntaDosVol">
+    <label><input type="radio" name="nombrado" value="el señor de la noche"> El señor de la noche </label><br>
+    <label><input type="radio" name="nombrado" value="el malo maloso"> El malo maloso </label><br>
+    <label><input type="radio" name="nombrado" value="el que no debe ser nombrado"> El que no debe ser nombrado </label><br><br>
+    </form>
+    <button onclick="nextQuestFive()"> Siguiente </button>
+  </section>
+
+
+  <section id="preguntaTresVol">
+    <h1> ¿Cual es el VERDADERO nombre Lord Voldemort? </h1>
+    <form name="preguntaTresVol">
+    <label><input type="radio" name="tomryddle" value="juan riveros"> Juan Riveros</label><br>
+    <label><input type="radio" name="tomryddle" value="tom ryddle"> Tom Ryddle </label><br>
+    <label><input type="radio" name="tomryddle" value="richard thomson"> Richard Thomson</label><br><br>
+    </form>
+    <button onclick="nextQuestSix()"> Finalizar </button>
+  </section>
+
+
+
+  <section id="resultados">
+    <h1> Resultados </h1>
+    <h1 id="fin">Hola</h1>
+    <button onclick="playAgain()"> ¡Vuelve a jugar! </button>
+  </section>
+  
+
+</body>
+
+</html>
